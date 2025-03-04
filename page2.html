@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Q3PROJECT</title>
+    <style>
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/024/954/434/small_2x/abstract-pink-pastel-soft-and-smooth-gradient-studio-background-rose-gold-color-background-light-pink-gradient-background-photo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 100vh;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .nav-link {
+            margin: 0 15px;
+        }
+        .ticket-image {
+            width: 100%;
+            max-width: 490px;
+            margin: 20px 0;
+        }
+        .btn-dark-pink {
+            background-color: #D5006D; 
+            color: white;
+        }
+        .train-map {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px 0;
+        }
+        .schedule-container {
+            text-align: center;
+            margin: 90px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 1000px;
+            position: relative; /* To allow for image positioning */
+            top: 100px;
+        }
+        .schedule-container a.nav-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #D5006D;
+            border-bottom: 2px solid #D5006D;
+            padding-bottom: 5px;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid #D5006D;
+        }
+        .bottom-left-image {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/046/449/545/small_2x/a-3d-rendering-of-a-cute-pink-robot-with-glowing-eyes-png.png" alt="Logo" style="width: 40px; height: 40px;">
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page2.html">Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page3.html">Contact</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control" type="text" placeholder="Search...">
+                <button class="btn btn-dark-pink" type="button">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="schedule-container">
+    <h2>Schedule</h2>
+    <a href="https://www.moneymax.ph/lifestyle/articles/guide-mrt-station">
+        <img src="C:\Users\admin\OneDrive\画像\Screenshots\Screenshot 2025-03-04 184358.png" alt="Train Map" class="train-map">
+    </a>
+    <p>Check the latest times for the Departure of the stations!</p>
+    <a href="https://moovitapp.com/index/en/public_transit-line-mrt3-Manila-1022-9970-7638476-0" class="nav-link">View Schedule</a>
+    <br>
+    <br>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8JM4gJYTv-OeOgfFEbNEx55fRdHtaLWAS6g&s">
+</div>
+
+<footer class="footer">
+    <p>&copy; 2023 Metro Manila Train</p>
+</footer>
+
+</body>
+</html>

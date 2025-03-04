@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Metro Manila Train</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://images.esquiremag.ph/esquiremagph/images/2018/04/05/04052018-TRAINSmains.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            background-color: rgba(255, 192, 203, 0.8); /* Light pink with transparency */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px; /* Reduced padding */
+            margin: auto;
+            box-shadow: 2px 2px 10px rgba(5, 4, 4, 0.8);
+            position: relative;
+            top: 50px;
+            border-radius: 10px;
+            width: 400px;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .nav-link {
+            margin: 0 15px;
+        }
+        .ticket-image {
+            width: 100%;
+            max-width: 490px;
+            margin: 20px 0;
+        }
+        .btn-dark-pink {
+            background-color: #D5006D; /* Dark pink color */
+            color: white;
+        }
+        .train-ticket {
+            width: 100%;
+            max-width: 450px; /* Adjust image width */
+            margin: 20px 0;
+            border-radius: 10px; /* Rounded corners for the image */
+        }
+        .train-info {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.7); /* Slight transparency for image container */
+            border-radius: 10px;
+        }
+
+        /* Footer styling */
+        .footer {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+            border-top: 1px solid #D5006D;
+            padding: 5px;
+ 
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/046/449/545/small_2x/a-3d-rendering-of-a-cute-pink-robot-with-glowing-eyes-png.png" alt="Logo" style="width: 40px; height: 40px;">
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page2.html">Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page3.html">Contact</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control" type="text" placeholder="Search...">
+                <button class="btn btn-dark-pink" type="button">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <h1 class="text-center">Metro Manila Train</h1>
+    <form class="form-group">
+        <label>Select the station you're traveling to</label>
+        <select id="seat" class="form-select mb-3">
+            <option value="none">Choose</option>
+            <option value="0">North Ave</option>
+            <option value="20">Quezon Ave</option>
+            <option value="23">GMA Kamuning</option>
+            <option value="25">Araneta Cubao</option>
+            <option value="28">Santalon-Annapolis</option>
+            <option value="37">Ortigas</option>
+            <option value="49">Shaw Blvd.</option>
+            <option value="54">Boni Avenue</option>
+            <option value="58">Guadalupe</option>
+            <option value="60">Buendia</option>
+            <option value="64">Ayala</option>
+            <option value="67">Megallanes</option>
+            <option value="70">Taft Avenue</option>
+        </select>
+
+        <label>Select discount:</label>
+        <select id="discount" class="form-select mb-3">
+            <option value="0">Choose</option>
+            <option value="0.2">Student - 20% Off</option>
+            <option value="0.2">PWD - 20% Off</option>
+            <option value="0.2">Senior Citizen - 20% Off</option>
+            <option value="0">N/A</option>
+        </select>
+
+        <button type="button" class="btn btn-warning" onclick="showOriginalPrice()">Show Original Price</button>
+        <button type="button" class="btn btn-warning" onclick="showDiscountedPrice()">Show Discounted Price</button>
+    </form>
+
+    <!-- Container for the image below the form -->
+    <div class="train-info">
+        <img src="https://mrt3.com/images/SINGLE.png" class="train-ticket" alt="Train Ticket">
+    </div>
+</div>
+
+<script>
+    function showOriginalPrice() {
+        const seatPrice = parseFloat(document.getElementById("seat").value);
+        
+        if (seatPrice === 0) {
+            alert("Please select a valid seat option.");
+            return;
+        }
+
+        alert("The original ticket price is: ₱" + seatPrice.toFixed(2));
+    }
+
+    function showDiscountedPrice() {
+        const seatPrice = parseFloat(document.getElementById("seat").value);
+        const discountRate = parseFloat(document.getElementById("discount").value);
+        
+        if (seatPrice === 0) {
+            alert("Please select a valid seat option.");
+            return;
+        }
+
+        const discountAmount = seatPrice * discountRate;
+        const finalPrice = seatPrice - discountAmount;
+
+        alert("The discounted ticket price is: ₱" + finalPrice.toFixed(2));
+    }
+</script>
+
+<footer class="footer">
+    <p>&copy; 2023 Metro Manila Train</p>
+</footer>
+
+</body>
+</html>
